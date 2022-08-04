@@ -1,0 +1,33 @@
+<div class="m-4">
+  <div>
+    <input
+      type="value"
+      class="form-control"
+      placeholder="Enter a personal value"
+      [(ngModel)]="_newValue.title"
+    />
+    <small class="form-text text-muted">
+      write a value you find important
+    </small>
+  </div>
+
+  <button type="submit" class="btn btn-primary" (click)="onAdd()">
+    Add Peronal Value
+  </button>
+</div>
+
+<li *ngFor="let value of _values">
+  <div class="card m-4 border-5" style="width: 18rem;">
+    <div class="card-body bg-primary text-white m-1 rounded-5">
+      <h5 class="card-ti tle">title: {{ value.title | uppercase }}</h5>
+      <h6 class="card-subtitle mb-2 text-dark">id: [{{ value.id }}]</h6>
+    </div>
+    <button
+      type="button"
+      class="btn btn-danger m-1"
+      (click)="removeValue(value)"
+    >
+      Remove
+    </button>
+  </div>
+</li>

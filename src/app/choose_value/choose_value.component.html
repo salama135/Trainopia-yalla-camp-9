@@ -1,0 +1,21 @@
+<div class="card m-4 border-5" style="width: 18rem;">
+  _valueOption1
+  <div class="card-body bg-primary text-white m-1 rounded-5">
+    <h5 class="card-ti tle">title: {{ _valueOption1.title | uppercase }}</h5>
+    <h6 class="card-subtitle mb-2 text-dark">id: [{{ _valueOption1.id }}]</h6>
+  </div>
+  <button type="button" class="btn btn-success m-1" (click)="choose(1)">
+    choose
+  </button>
+</div>
+
+<div class="card m-4 border-5" style="width: 18rem;">
+  _valueOption2
+  <div class="card-body bg-info text-white m-1 rounded-5">
+    <h5 class="card-ti tle">title: {{ _valueOption2.title | uppercase }}</h5>
+    <h6 class="card-subtitle mb-2 text-dark">id: [{{ _valueOption2.id }}]</h6>
+  </div>
+  <button type="button" class="btn btn-success m-1" (click)="choose(2)">
+    choose
+  </button>
+</div>
