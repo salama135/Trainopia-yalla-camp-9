@@ -41,16 +41,17 @@ export class ChooseValueComponent implements OnInit {
   }
 
   nextIteration() {
-    if (this.i == this._values.length) {
-      this.finished = true;
-      this.viewTop3PerosnalValues();
-      return;
-    }
     this.j--;
-
     if (this.j <= 0) {
       this.i++;
+      if (this.i >= this._values.length - 1) {
+        this.finished = true;
+        this.viewTop3PerosnalValues();
+        return;
+      }
+
       this.j = this.i + 1;
+
       this._valueOption1 = this._values[this.j - 1];
       this._valueOption2 = this._values[this.j];
       return;
@@ -60,5 +61,9 @@ export class ChooseValueComponent implements OnInit {
     }
   }
 
-  viewTop3PerosnalValues() {}
+  viewTop3PerosnalValues() {
+    console.log(this._values[0]);
+    console.log(this._values[1]);
+    console.log(this._values[2]);
+  }
 }
