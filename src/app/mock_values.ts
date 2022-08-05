@@ -1,5 +1,6 @@
 import { Value } from './values/value';
 
+export const MAX_NUMBER_OF_VALUES: number = 10;
 export const VALUES: Value[] = [
   { id: 1, title: 'certainty' },
   { id: 2, title: 'control' },

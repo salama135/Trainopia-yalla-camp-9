@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Value } from './value';
-import { VALUES } from '../mock_values';
+import { VALUES, MAX_NUMBER_OF_VALUES } from '../mock_values';
 
 @Component({
   selector: 'app-values',
@@ -11,23 +11,27 @@ export class ValuesComponent implements OnInit {
   constructor() {}
   _values = VALUES;
 
-  MAX_NUMBER_OF_VALUES: number = 10;
+  maxValuesLength: number;
 
   _newValue: Value = {
     id: 0,
     title: '',
   };
 
-  ngOnInit(): void {}
+  @Output() newLengthEvent = new EventEmitter<string>();
+
+  ngOnInit(): void {
+    this.maxValuesLength = MAX_NUMBER_OF_VALUES;
+  }
 
   isEmptyOrSpaces(str): boolean {
     return str === null || str.match(/^ *$/) !== null;
   }
 
   onAdd() {
-    if (this._values.length == this.MAX_NUMBER_OF_VALUES) {
+    if (this._values.length == MAX_NUMBER_OF_VALUES) {
       alert(
-        `max number of personal values reacherd  "${this.MAX_NUMBER_OF_VALUES}"`
+        `max number of personal values reacherd  "${MAX_NUMBER_OF_VALUES}"`
       );
       return;
     }
@@ -40,6 +44,12 @@ export class ValuesComponent implements OnInit {
       id: 0,
       title: '',
     };
+
+    this.sendNewLength(this._values.length);
+  }
+
+  sendNewLength(length) {
+    this.newLengthEvent.emit(length);
   }
 
   removeValue(value: Value) {
