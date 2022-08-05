@@ -2,15 +2,15 @@
 <div *ngIf="choose; then thenBlock; else elseBlock"></div>
 
 <ng-template #elseBlock>
-  <button type="button" class="btn btn-success m-1" (click)="next()">
-    next
+  <button type="button" class="btn btn-success mx-4" (click)="next()">
+    Next <i class="bi bi-arrow-right-circle"></i>
   </button>
   <app-values></app-values>
 </ng-template>
 
 <ng-template #thenBlock>
-  <button type="button" class="btn btn-success m-1" (click)="reset()">
-    reset
+  <button type="button" class="btn btn-success mx-4" (click)="reset()">
+    Reset <i class="bi bi-arrow-repeat"></i>
   </button>
   <app-choose_value></app-choose_value>
 </ng-template>
