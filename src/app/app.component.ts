@@ -35,6 +35,6 @@ export class AppComponent implements OnInit {
 
   setNewLength(length) {
     console.log(length);
-    this.newLength = Number.parseInt(length);
+    this.newLength = length;
   }
 }

@@ -18,10 +18,11 @@ export class ValuesComponent implements OnInit {
     title: '',
   };
 
-  @Output() newLengthEvent = new EventEmitter<string>();
+  @Output() newLengthEvent = new EventEmitter();
 
   ngOnInit(): void {
     this.maxValuesLength = MAX_NUMBER_OF_VALUES;
+    this.sendNewLength(this._values.length);
   }
 
   isEmptyOrSpaces(str): boolean {
