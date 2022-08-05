@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Value } from '../values/value';
 import { VALUES } from '../mock_values';
 
@@ -9,6 +9,7 @@ import { VALUES } from '../mock_values';
 })
 export class ChooseValueComponent implements OnInit {
   constructor() {}
+
   _values = VALUES;
 
   i: any = 0;
