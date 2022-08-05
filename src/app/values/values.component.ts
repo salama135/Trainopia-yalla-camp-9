@@ -22,7 +22,7 @@ export class ValuesComponent implements OnInit {
 
   ngOnInit(): void {
     this.maxValuesLength = MAX_NUMBER_OF_VALUES;
-    this.sendNewLength(this._values.length);
+    this.sendNewLength();
   }
 
   isEmptyOrSpaces(str): boolean {
@@ -46,14 +46,15 @@ export class ValuesComponent implements OnInit {
       title: '',
     };
 
-    this.sendNewLength(this._values.length);
+    this.sendNewLength();
   }
 
-  sendNewLength(length) {
-    this.newLengthEvent.emit(length);
+  sendNewLength() {
+    this.newLengthEvent.emit(this._values.length);
   }
 
   removeValue(value: Value) {
     this._values.splice(this._values.indexOf(value), 1);
+    this.sendNewLength();
   }
 }

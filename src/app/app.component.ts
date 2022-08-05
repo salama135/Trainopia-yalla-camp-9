@@ -19,6 +19,7 @@ export class AppComponent implements OnInit {
   }
 
   next() {
+    console.log(this.newLength);
     if (this.newLength < MAX_NUMBER_OF_VALUES) {
       alert(
         `max number of personal values not reacherd "${MAX_NUMBER_OF_VALUES}"`
