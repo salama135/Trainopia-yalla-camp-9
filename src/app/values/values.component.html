@@ -7,8 +7,8 @@
       [(ngModel)]="_newValue.title"
     />
     <p class="form-text text-muted">write a value you find important</p>
-    <h3>{{ MAX_NUMBER_OF_VALUES - _values.length }} Personal Values left</h3>
     <h3>Add {{ MAX_NUMBER_OF_VALUES }} Personal Values</h3>
+    <h3>{{ MAX_NUMBER_OF_VALUES - _values.length }} Personal Values left</h3>
   </div>
 
   <button type="submit" class="btn btn-primary" (click)="onAdd()">
