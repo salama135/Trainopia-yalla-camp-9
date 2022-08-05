@@ -1,6 +1,6 @@
 <hello title="{{ title }}"></hello>
-<div *ngIf="choose; then thenBlock else elseBlock"></div>
-<ng-template #thenBlock>Content to render when condition is true.</ng-template>
-<ng-template #elseBlock>Content to render when condition is false.</ng-template>
-<app-values></app-values> 
-<app-choose_value></app-choose_value>
+<div *ngIf="choose; then thenBlock; else elseBlock"></div>
+
+<ng-template #thenBlock><app-values></app-values></ng-template>
+
+<ng-template #elseBlock><app-choose_value></app-choose_value></ng-template>
