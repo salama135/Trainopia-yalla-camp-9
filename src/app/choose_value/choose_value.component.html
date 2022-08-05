@@ -1,7 +1,14 @@
 <!-- <h1>{{ i }}</h1>
 <h1>{{ j }}</h1> -->
 <div *ngIf="finished; then thenBlock; else elseBlock"></div>
-<ng-template #thenBlock>Content to render when condition is true.</ng-template>
+<ng-template #thenBlock>
+  <div>
+    <h3>Your Top 3 Personal Values are...</h3>
+    <h2>1. {{ _values[0].title }}</h2>
+    <h2>2. {{ _values[1].title }}</h2>
+    <h2>3. {{ _values[2].title }}</h2>
+  </div>
+</ng-template>
 
 <ng-template #elseBlock>
   <div>
