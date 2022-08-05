@@ -9,6 +9,10 @@
     <small class="form-text text-muted">
       write a value you find important
     </small>
+    <h3>
+      current number of values {{ MAX_NUMBER_OF_VALUES - _values.length }}
+    </h3>
+    <h3>max number of values {{ MAX_NUMBER_OF_VALUES }}</h3>
   </div>
 
   <button type="submit" class="btn btn-primary" (click)="onAdd()">
@@ -20,7 +24,7 @@
   <div class="card m-4 border-5" style="width: 18rem;">
     <div class="card-body bg-primary text-white m-1 rounded-5">
       <h5 class="card-ti tle">title: {{ value.title | uppercase }}</h5>
-      <h6 class="card-subtitle mb-2 text-dark">id: [{{ value.id }}]</h6>
+      <!-- <h6 class="card-subtitle mb-2 text-dark">id: [{{ value.id }}]</h6> -->
     </div>
     <button
       type="button"

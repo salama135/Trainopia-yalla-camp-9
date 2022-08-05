@@ -1,6 +1,16 @@
 <hello title="{{ title }}"></hello>
 <div *ngIf="choose; then thenBlock; else elseBlock"></div>
 
-<ng-template #thenBlock><app-values></app-values></ng-template>
+<ng-template #elseBlock>
+  <button type="button" class="btn btn-success m-1" (click)="next()">
+    next
+  </button>
+  <app-values></app-values>
+</ng-template>
 
-<ng-template #elseBlock><app-choose_value></app-choose_value></ng-template>
+<ng-template #thenBlock>
+  <button type="button" class="btn btn-success m-1" (click)="reset()">
+    reset
+  </button>
+  <app-choose_value></app-choose_value>
+</ng-template>

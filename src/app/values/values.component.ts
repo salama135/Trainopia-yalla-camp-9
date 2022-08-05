@@ -11,6 +11,8 @@ export class ValuesComponent implements OnInit {
   constructor() {}
   _values = VALUES;
 
+  MAX_NUMBER_OF_VALUES: number = 10;
+
   _newValue: Value = {
     id: 0,
     title: '',
@@ -23,6 +25,12 @@ export class ValuesComponent implements OnInit {
   }
 
   onAdd() {
+    if (this._values.length == this.MAX_NUMBER_OF_VALUES) {
+      alert(
+        `max number of personal values reacherd  "${this.MAX_NUMBER_OF_VALUES}"`
+      );
+      return;
+    }
     if (this.isEmptyOrSpaces(this._newValue.title)) return;
 
     this._newValue.id = this._values.length + 1;
