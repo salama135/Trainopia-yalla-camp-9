@@ -4,9 +4,26 @@
 <ng-template #thenBlock style="background-color: transparent;">
   <div class="m-4">
     <h3>اهم ثلاثة قيم لك هم...</h3>
+
     <h2>1. {{ _values[0].title }}</h2>
     <h2>2. {{ _values[1].title }}</h2>
     <h2>3. {{ _values[2].title }}</h2>
+
+    <h3>ترتيب القيم هم</h3>
+
+    <li *ngFor="let value of _values">
+      <div
+        class="card m-4 border-5"
+        style="width: 18rem; background-color: #fff"
+      >
+        <div
+          class="card-body text-white m-1 rounded-5"
+          style="background-color: #00ADB5;"
+        >
+          <h2 class="card-ti tle">اسم القيمة: {{ value.title | uppercase }}</h2>
+        </div>
+      </div>
+    </li>
   </div>
 </ng-template>
 

@@ -1,22 +1,28 @@
 <div style="background-color: transparent;">
   <div class="m-4">
-    <div class="">
-      <input
-        type="value"
-        class="form-control"
-        placeholder="ادخل قيمة شخصية"
-        [(ngModel)]="_newValue.title"
-      />
-      <p class="form-text text-dark">اكتب قيمة شخصية مهمة لك</p>
+    <div>
+      <div class="row">
+        <div class="col-8">
+          <input
+            type="value"
+            class="form-control"
+            placeholder="ادخل قيمة شخصية"
+            [(ngModel)]="_newValue.title"
+          />
+          <h6 class="form-text text-dark">اكتب قيمة شخصية مهمة لك</h6>
+        </div>
+        <div class="col-4">
+          <button type="submit" class="btn btn-success" (click)="onAdd()">
+            أضف <i class="bi bi-plus-circle"></i>
+          </button>
+        </div>
+      </div>
+
       <div class="my-4">
         <h3>اضف {{ maxValuesLength }} قيم شخصية</h3>
         <h3>تبقي {{ maxValuesLength - _values.length }} قيم شخصية</h3>
       </div>
     </div>
-
-    <button type="submit" class="btn btn-success" (click)="onAdd()">
-      أضف القيمة الشخصية <i class="bi bi-plus-circle"></i>
-    </button>
   </div>
 
   <li *ngFor="let value of _values">
