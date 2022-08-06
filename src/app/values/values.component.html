@@ -1,6 +1,10 @@
 <div style="background-color: transparent;">
   <div class="m-4">
     <div>
+      <div class="my-4">
+        <h3>اضف {{ maxValuesLength }} قيم شخصية</h3>
+        <h3>تبقي {{ maxValuesLength - _values.length }} قيم شخصية</h3>
+      </div>
       <div class="row">
         <div class="col-8">
           <input
@@ -16,11 +20,6 @@
             أضف <i class="bi bi-plus-circle"></i>
           </button>
         </div>
-      </div>
-
-      <div class="my-4">
-        <h3>اضف {{ maxValuesLength }} قيم شخصية</h3>
-        <h3>تبقي {{ maxValuesLength - _values.length }} قيم شخصية</h3>
       </div>
     </div>
   </div>
