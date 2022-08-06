@@ -3,23 +3,23 @@
     <input
       type="value"
       class="form-control"
-      placeholder="Enter a personal value"
+      placeholder="ادخل قيمة شخصية"
       [(ngModel)]="_newValue.title"
     />
-    <p class="form-text text-muted">write a value you find important</p>
-    <h3>Add {{ maxValuesLength }} Personal Values</h3>
-    <h3>{{ maxValuesLength - _values.length }} Personal Values left</h3>
+    <p class="form-text text-muted">اكتب قيمة شخصية مهمة لك</p>
+    <h3>اضف {{ maxValuesLength }} قيم شخصية</h3>
+    <h3>تبقي {{ maxValuesLength - _values.length }} قيم شخصية</h3>
   </div>
 
   <button type="submit" class="btn btn-primary" (click)="onAdd()">
-    Add Peronal Value
+    أضف القيمة الشخصية
   </button>
 </div>
 
 <li *ngFor="let value of _values">
   <div class="card m-4 border-5" style="width: 18rem;">
     <div class="card-body bg-primary text-white m-1 rounded-5">
-      <h5 class="card-ti tle">title: {{ value.title | uppercase }}</h5>
+      <h5 class="card-ti tle">اسم القيمة: {{ value.title | uppercase }}</h5>
       <!-- <h6 class="card-subtitle mb-2 text-dark">id: [{{ value.id }}]</h6> -->
     </div>
     <button
@@ -27,7 +27,7 @@
       class="btn btn-danger m-1"
       (click)="removeValue(value)"
     >
-      Remove
+      إزالة
     </button>
   </div>
 </li>

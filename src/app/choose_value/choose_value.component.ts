@@ -20,6 +20,7 @@ export class ChooseValueComponent implements OnInit {
   _valueOption2: Value;
 
   ngOnInit(): void {
+    console.log('hello');
     this.i = 0;
     this.j = this.i + 1;
     this._valueOption1 = this._values[this.j - 1];

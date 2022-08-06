@@ -2,8 +2,8 @@
 <h1>{{ j }}</h1> -->
 <div *ngIf="finished; then thenBlock; else elseBlock"></div>
 <ng-template #thenBlock>
-  <div>
-    <h3>Your Top 3 Personal Values are...</h3>
+  <div class="m-4">
+    <h3>اهم ثلاثة قيم لكم هم...</h3>
     <h2>1. {{ _values[0].title }}</h2>
     <h2>2. {{ _values[1].title }}</h2>
     <h2>3. {{ _values[2].title }}</h2>
@@ -16,12 +16,12 @@
       <!-- _valueOption1 -->
       <div class="card-body bg-primary text-white m-1 rounded-5">
         <h5 class="card-ti tle">
-          title: {{ _valueOption1.title | uppercase }}
+          اسم القيمة: {{ _valueOption1.title | uppercase }}
         </h5>
         <!-- <h6 class="card-subtitle mb-2 text-dark">id: [{{ _valueOption1.id }}]</h6> -->
       </div>
       <button type="button" class="btn btn-success m-1" (click)="choose(1)">
-        choose
+        اختر
       </button>
     </div>
 
@@ -29,12 +29,12 @@
       <!-- _valueOption2 -->
       <div class="card-body bg-info text-white m-1 rounded-5">
         <h5 class="card-ti tle">
-          title: {{ _valueOption2.title | uppercase }}
+          اسم القيمة: {{ _valueOption2.title | uppercase }}
         </h5>
         <!-- <h6 class="card-subtitle mb-2 text-dark">id: [{{ _valueOption2.id }}]</h6> -->
       </div>
       <button type="button" class="btn btn-success m-1" (click)="choose(2)">
-        choose
+        اختر
       </button>
     </div>
   </div>

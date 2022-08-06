@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { VALUES, MAX_NUMBER_OF_VALUES } from './mock_values';
+import { VALUES, MAX_NUMBER_OF_VALUES, isArabic } from './mock_values';
 
 @Component({
   selector: 'my-app',
@@ -7,10 +7,9 @@ import { VALUES, MAX_NUMBER_OF_VALUES } from './mock_values';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  title = 'Top 3 Peronal Values';
+  title = 'أهم ثلاثة قيم';
 
   choose: boolean;
-
   newLength: Number;
 
   ngOnInit() {
