@@ -1,7 +1,7 @@
 <!-- <h1>{{ i }}</h1>
 <h1>{{ j }}</h1> -->
 <div *ngIf="finished; then thenBlock; else elseBlock"></div>
-<ng-template #thenBlock>
+<ng-template #thenBlock style="background-color: transparent;">
   <div class="m-4">
     <h3>اهم ثلاثة قيم لك هم...</h3>
     <h2>1. {{ _values[0].title }}</h2>
@@ -10,11 +10,14 @@
   </div>
 </ng-template>
 
-<ng-template #elseBlock>
+<ng-template #elseBlock style="background-color: transparent;">
   <div>
     <div class="card m-4 border-5" style="width: 18rem;">
       <!-- _valueOption1 -->
-      <div class="card-body bg-primary text-white m-1 rounded-5">
+      <div
+        class="card-body text-white m-1 rounded-5"
+        style="background-color: #00ADB5;"
+      >
         <h5 class="card-ti tle">
           اسم القيمة: {{ _valueOption1.title | uppercase }}
         </h5>
@@ -25,9 +28,12 @@
       </button>
     </div>
 
-    <div class="card m-4 border-5" style="width: 18rem;">
+    <div class="card m-4 border-5" style="width: 18rem; ">
       <!-- _valueOption2 -->
-      <div class="card-body bg-info text-white m-1 rounded-5">
+      <div
+        class="card-body text-white m-1 rounded-5"
+        style="background-color: #00ADB5;"
+      >
         <h5 class="card-ti tle">
           اسم القيمة: {{ _valueOption2.title | uppercase }}
         </h5>

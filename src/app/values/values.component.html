@@ -1,35 +1,40 @@
-<div class="m-4">
-  <div>
-    <input
-      type="value"
-      class="form-control"
-      placeholder="ادخل قيمة شخصية"
-      [(ngModel)]="_newValue.title"
-    />
-    <p class="form-text text-muted">اكتب قيمة شخصية مهمة لك</p>
-    <div class="my-4">
-      <h3>اضف {{ maxValuesLength }} قيم شخصية</h3>
-      <h3>تبقي {{ maxValuesLength - _values.length }} قيم شخصية</h3>
+<div style="background-color: transparent;">
+  <div class="m-4">
+    <div class="">
+      <input
+        type="value"
+        class="form-control"
+        placeholder="ادخل قيمة شخصية"
+        [(ngModel)]="_newValue.title"
+      />
+      <p class="form-text text-dark">اكتب قيمة شخصية مهمة لك</p>
+      <div class="my-4">
+        <h3>اضف {{ maxValuesLength }} قيم شخصية</h3>
+        <h3>تبقي {{ maxValuesLength - _values.length }} قيم شخصية</h3>
+      </div>
     </div>
-  </div>
 
-  <button type="submit" class="btn btn-primary" (click)="onAdd()">
-    أضف القيمة الشخصية
-  </button>
-</div>
-
-<li *ngFor="let value of _values">
-  <div class="card m-4 border-5" style="width: 18rem;">
-    <div class="card-body bg-primary text-white m-1 rounded-5">
-      <h5 class="card-ti tle">اسم القيمة: {{ value.title | uppercase }}</h5>
-      <!-- <h6 class="card-subtitle mb-2 text-dark">id: [{{ value.id }}]</h6> -->
-    </div>
-    <button
-      type="button"
-      class="btn btn-danger m-1"
-      (click)="removeValue(value)"
-    >
-      إزالة
+    <button type="submit" class="btn btn-success" (click)="onAdd()">
+      أضف القيمة الشخصية <i class="bi bi-plus-circle"></i>
     </button>
   </div>
-</li>
+
+  <li *ngFor="let value of _values">
+    <div class="card m-4 border-5" style="width: 18rem; background-color: #fff">
+      <div
+        class="card-body text-white m-1 rounded-5"
+        style="background-color: #00ADB5;"
+      >
+        <h5 class="card-ti tle">اسم القيمة: {{ value.title | uppercase }}</h5>
+        <!-- <h6 class="card-subtitle mb-2 text-dark">id: [{{ value.id }}]</h6> -->
+      </div>
+      <button
+        type="button"
+        class="btn btn-danger m-1"
+        (click)="removeValue(value)"
+      >
+        إزالة <i class="bi bi-trash"></i>
+      </button>
+    </div>
+  </li>
+</div>

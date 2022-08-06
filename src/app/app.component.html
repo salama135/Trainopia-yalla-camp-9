@@ -1,17 +1,19 @@
-<hello title="{{ title }}"></hello>
+<div style="background-color: transparent;">
+  <hello title="{{ title }}"></hello>
 
-<div *ngIf="choose; then thenBlock; else elseBlock"></div>
+  <div *ngIf="choose; then thenBlock; else elseBlock"></div>
 
-<ng-template #elseBlock>
-  <button type="button" class="btn btn-success mx-4" (click)="next()">
-    التالي <i class="bi bi-arrow-right-circle"></i>
-  </button>
-  <app-values (newLengthEvent)="setNewLength($event)"></app-values>
-</ng-template>
+  <ng-template #elseBlock>
+    <button type="button" class="btn btn-success mx-4" (click)="next()">
+      التالي <i class="bi bi-arrow-right-circle"></i>
+    </button>
+    <app-values (newLengthEvent)="setNewLength($event)"></app-values>
+  </ng-template>
 
-<ng-template #thenBlock>
-  <button type="button" class="btn btn-warning mx-4" (click)="reset()">
-    المحاولة من البداية <i class="bi bi-arrow-repeat"></i>
-  </button>
-  <app-choose_value></app-choose_value>
-</ng-template>
+  <ng-template #thenBlock>
+    <button type="button" class="btn btn-warning mx-4" (click)="reset()">
+      المحاولة من البداية <i class="bi bi-arrow-repeat"></i>
+    </button>
+    <app-choose_value></app-choose_value>
+  </ng-template>
+</div>
