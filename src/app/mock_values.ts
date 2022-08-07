@@ -1,6 +1,6 @@
 import { Value } from './values/value';
 
-export const MAX_NUMBER_OF_VALUES: number = 10;
+export const MAX_NUMBER_OF_VALUES: number = 7;
 export const isArabic: boolean = true;
 
 export const VALUES: Value[] = [

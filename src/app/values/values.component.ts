@@ -31,9 +31,7 @@ export class ValuesComponent implements OnInit {
 
   onAdd() {
     if (this._values.length == MAX_NUMBER_OF_VALUES) {
-      alert(
-        `max number of personal values reacherd  "${MAX_NUMBER_OF_VALUES}"`
-      );
+      alert(`لا يمكن اضافة قيم أكثر من "${MAX_NUMBER_OF_VALUES}"`);
       return;
     }
     if (this.isEmptyOrSpaces(this._newValue.title)) return;
