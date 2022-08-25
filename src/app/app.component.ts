@@ -7,7 +7,7 @@ import { VALUES, MAX_NUMBER_OF_VALUES, isArabic } from './mock_values';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  title = 'أهم ثلاثة قيم';
+  title = 'أهم ثلاث قيم';
 
   choose: boolean;
   newLength: Number;
